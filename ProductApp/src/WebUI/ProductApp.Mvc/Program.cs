@@ -1,8 +1,15 @@
+﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+using ProductApp.Infrastructure.Repositories;
+using ProductApp.Services;
+using ProductApp.Services.Mappings;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IProductService, ProductService>();//calisacaği servisi söyledik
+builder.Services.AddScoped<IProductRepository, FakeProductRepository>();
+builder.Services.AddAutoMapper(typeof(MapProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

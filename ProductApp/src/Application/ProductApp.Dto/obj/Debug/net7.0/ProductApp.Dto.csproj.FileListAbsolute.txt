@@ -1,0 +1,12 @@
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\bin\Debug\net7.0\ProductApp.Dto.deps.json
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\bin\Debug\net7.0\ProductApp.Dto.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\bin\Debug\net7.0\ProductApp.Dto.pdb
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.csproj.AssemblyReference.cache
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.AssemblyInfoInputs.cache
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.AssemblyInfo.cs
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.csproj.CoreCompileInputs.cache
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\refint\ProductApp.Dto.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ProductApp.Dto.pdb
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Application\ProductApp.Dto\obj\Debug\net7.0\ref\ProductApp.Dto.dll

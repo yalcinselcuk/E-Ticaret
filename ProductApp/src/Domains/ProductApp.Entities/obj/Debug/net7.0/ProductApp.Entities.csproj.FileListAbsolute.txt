@@ -1,0 +1,12 @@
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\bin\Debug\net7.0\ProductApp.Entities.deps.json
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\bin\Debug\net7.0\ProductApp.Entities.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\bin\Debug\net7.0\ProductApp.Entities.pdb
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.csproj.AssemblyReference.cache
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.AssemblyInfoInputs.cache
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.AssemblyInfo.cs
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.csproj.CoreCompileInputs.cache
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\refint\ProductApp.Entities.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ProductApp.Entities.pdb
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Domains\ProductApp.Entities\obj\Debug\net7.0\ref\ProductApp.Entities.dll

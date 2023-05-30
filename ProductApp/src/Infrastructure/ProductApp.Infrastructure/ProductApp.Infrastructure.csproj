@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\..\Domains\ProductApp.Entities\ProductApp.Entities.csproj" />
   </ItemGroup>
 
 </Project>

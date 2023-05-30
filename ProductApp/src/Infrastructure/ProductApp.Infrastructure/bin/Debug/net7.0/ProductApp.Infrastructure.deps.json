@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ProductApp.Infrastructure/1.0.0": {
+        "dependencies": {
+          "ProductApp.Entities": "1.0.0"
+        },
+        "runtime": {
+          "ProductApp.Infrastructure.dll": {}
+        }
+      },
+      "ProductApp.Entities/1.0.0": {
+        "runtime": {
+          "ProductApp.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProductApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductApp.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

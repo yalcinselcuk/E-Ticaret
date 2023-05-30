@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tkWNLFVosCOtDbklu31EsE9x6vxlrA2uFJCQu/lfUUpIX/DKtdqGDQOJ/FyUIxc+nQTh6+h8MWQmRU6VQASt/Q==",
+  "dgSpecHash": "yTupQwzlQL4TPw6wXEYXyc+IAufNxNZXu9hC7wK8HKh0nzfIyj+pqojZddztSWZ+SXG2gDWMJSlPZ3NFZ+7K5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Domains\\ProductApp.Entities.csproj",
+  "projectFilePath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

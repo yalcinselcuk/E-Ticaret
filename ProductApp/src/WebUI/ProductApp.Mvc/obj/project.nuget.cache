@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "dKHsewM6NyE6MmryFSNUMCjywrYJW5ptB11aK070+xJcD0N/rawCWjdWkxgy/xucqXLyTIqAYTAVy//s4NScAA==",
+  "dgSpecHash": "+xRRRERXlsiSYgcOEO6Xi+7YjdI2HJZDi9zakwi+ibA5AR9XGQ+KGaM4KSNilSCXGtjmw7QxLCtRKKhXcaxdAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\ProductApp.Mvc.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yalci\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

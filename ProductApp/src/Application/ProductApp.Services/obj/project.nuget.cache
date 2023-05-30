@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VVRV7VdsN9fNk4eqHnafUfaCmTuEt+7cKs266o9vsUGzwKFZWTlFq7XHjTpljWVbKYkV0yaoaAi8w8DURXkD3w==",
+  "dgSpecHash": "1mo7i9HiFG5ytgXFYlRGDra5aXE9otRvrePRm3RkSAyU9huU4bdvG9itmVBsLQXrcHltwgvNwllpNmKo+Jg4FQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\ProductApp.Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yalci\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "ProductApp.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ProductApp.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductApp.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProductApp.Entities/1.0.0": {
+      "type": "project",
+      "path": "../../Domains/ProductApp.Entities/ProductApp.Entities.csproj",
+      "msbuildProject": "../../Domains/ProductApp.Entities/ProductApp.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "ProductApp.Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\yalci\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj": {
+              "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

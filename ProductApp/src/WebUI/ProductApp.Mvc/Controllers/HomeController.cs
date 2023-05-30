@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductApp.Mvc.Models;
+using ProductApp.Services;
 using System.Diagnostics;
 
 namespace ProductApp.Mvc.Controllers
@@ -7,15 +8,17 @@ namespace ProductApp.Mvc.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProductService productService;
+        public HomeController(ILogger<HomeController> logger, IProductService productService)
         {
             _logger = logger;
+            this.productService = productService;   
         }
 
         public IActionResult Index()
         {
-            return View();
+            var products = productService.GetProductsResponse();
+            return View(products);
         }
 
         public IActionResult Privacy()
