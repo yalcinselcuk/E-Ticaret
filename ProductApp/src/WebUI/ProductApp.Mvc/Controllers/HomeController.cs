@@ -15,10 +15,32 @@ namespace ProductApp.Mvc.Controllers
             this.productService = productService;   
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int pageNo = 1)
         {
             var products = productService.GetProductsResponse();
-            return View(products);
+            /*
+                1.sayfa : 0 eleman atla, 8 eleman al
+                2.sayfa : 8 eleman atla, 8 eleman al 
+                3.sayfa = 16 eleman atla, 8 eleman al
+             */
+
+            /*
+             Ürünlerin toplam sayfa sayısı için gerekli bilgiler ;
+                -sayfada kaç ürün olacak
+                -toplam kaç ürün var
+             */
+
+            var productPerPage = 8;
+            var productCount = products.Count();
+            var totalPage = Math.Ceiling((decimal)productCount / productPerPage);//yukarıya tamamladık 105 yerine 106 olursa, her sayfaya 5 tane olursa diye eksik sayfa olmasın
+            ViewBag.TotalPage = totalPage;
+
+            var paginatedProducts = products.OrderBy(c => c.Id)
+                                          .Skip((pageNo - 1) * productPerPage)
+                                          .Take(productPerPage)
+                                          .ToList();
+
+            return View(paginatedProducts);
         }
 
         public IActionResult Privacy()
