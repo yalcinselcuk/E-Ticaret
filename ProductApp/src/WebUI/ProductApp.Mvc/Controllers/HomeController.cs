@@ -39,6 +39,7 @@ namespace ProductApp.Mvc.Controllers
                                           .Skip((pageNo - 1) * productPerPage)
                                           .Take(productPerPage)
                                           .ToList();
+            ViewBag.PageNo = pageNo;
 
             return View(paginatedProducts);
         }
