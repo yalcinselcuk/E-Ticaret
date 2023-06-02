@@ -45,7 +45,8 @@ namespace ProductApp.Mvc.TagBuilders
     
                 @for (int i = 1; i <= ViewBag.TotalPage; i++)
                     {
-                        <li class="page-item @(i == ViewBag.PageNo ? "active" : "")"><a asp-action="Index" asp-route-pageNo="@i" class="page-link">@i</a></li>
+                        <li class="page-item @(i == ViewBag.
+            ? "active" : "")"><a asp-action="Index" asp-route-pageNo="@i" class="page-link">@i</a></li>
                     }
               </ul>
             </div>

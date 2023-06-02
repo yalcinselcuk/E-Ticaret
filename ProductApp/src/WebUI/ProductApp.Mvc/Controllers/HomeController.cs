@@ -15,9 +15,9 @@ namespace ProductApp.Mvc.Controllers
             this.productService = productService;
         }
 
-        public IActionResult Index(int pageNo = 1, int? categoryId = null)
+        public IActionResult Index(int pageNo = 1, int? id = null)
         {
-            var products = categoryId== null ? productService.GetProductsResponse() : productService.GetProductByCategory(categoryId.Value);
+            var products = id== null ? productService.GetProductsResponse() : productService.GetProductByCategory(id.Value);
             // id sıfırsa demek ki bir category yok, normal çalışacak (yani GetCourseDisplayResponse)
             // ama değilse o zaman GetCourseByCategory çalışır 
 
@@ -33,7 +33,7 @@ namespace ProductApp.Mvc.Controllers
                 -toplam kaç ürün var
              */
 
-            var productPerPage = 8;
+            var productPerPage = 4;
             var productCount = products.Count();
             var totalPage = Math.Ceiling((decimal)productCount / productPerPage);//yukarıya tamamladık 105 yerine 106 olursa, her sayfaya 5 tane olursa diye eksik sayfa olmasın
 
