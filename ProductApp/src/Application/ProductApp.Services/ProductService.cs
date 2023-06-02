@@ -19,10 +19,10 @@ namespace ProductApp.Services
             productRepository = _productRepository;
             _mapper = mapper;
         }
-        public IEnumerable<ProductResponse> GetProductsResponse()
+        public IEnumerable<ProductDisplayResponse> GetProductsResponse()
         {
             var products = productRepository.GetAll();
-            var response = _mapper.Map<IEnumerable< ProductResponse>>(products);
+            var response = _mapper.Map<IEnumerable< ProductDisplayResponse>>(products);
             return response;
         }
     }

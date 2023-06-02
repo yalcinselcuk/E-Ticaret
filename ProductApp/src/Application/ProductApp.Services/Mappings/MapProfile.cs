@@ -13,7 +13,7 @@ namespace ProductApp.Services.Mappings
     {
         public MapProfile() 
         {
-            CreateMap<Product, ProductResponse>();
+            CreateMap<Product, ProductDisplayResponse>();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductApp.Dto.Responses
 {
-    public class ProductResponse
+    public class ProductDisplayResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

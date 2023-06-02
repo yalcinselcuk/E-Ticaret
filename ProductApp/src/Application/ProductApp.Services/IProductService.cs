@@ -9,6 +9,6 @@ namespace ProductApp.Services
 {
     public interface IProductService
     {
-        IEnumerable<ProductResponse> GetProductsResponse();
+        IEnumerable<ProductDisplayResponse> GetProductsResponse();
     }
 }
