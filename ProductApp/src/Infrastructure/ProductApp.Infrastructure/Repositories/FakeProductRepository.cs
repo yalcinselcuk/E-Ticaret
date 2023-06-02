@@ -65,7 +65,7 @@ namespace ProductApp.Infrastructure.Repositories
         }
         public Product? Get(int id)
         {
-            throw new NotImplementedException();
+            return _products.Find(x => x.Id == id);
         }
 
         public IList<Product?> GetAll()

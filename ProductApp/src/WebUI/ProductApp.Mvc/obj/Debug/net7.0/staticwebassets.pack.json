@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\ProductApp.Mvc.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\AlertifyJS\\alertify.min.js",
+      "PackagePath": "staticwebassets\\AlertifyJS\\alertify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\AlertifyJS\\css\\alertify.min.css",
+      "PackagePath": "staticwebassets\\AlertifyJS\\css\\alertify.min.css"
+    },
+    {
       "Id": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

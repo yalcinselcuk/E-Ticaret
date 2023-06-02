@@ -40,3 +40,4 @@ C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\WebUI\ProductApp.Mvc\bin\Debug\n
 C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\WebUI\ProductApp.Mvc\bin\Debug\net7.0\ProductApp.Entities.pdb
 C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\WebUI\ProductApp.Mvc\bin\Debug\net7.0\ProductApp.Infrastructure.pdb
 C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\WebUI\ProductApp.Mvc\obj\Debug\net7.0\ProductApp.Mvc.csproj.CopyComplete
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\WebUI\ProductApp.Mvc\bin\Debug\net7.0\libman.json

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yu62dt1FcSdYki69TlskQqY+6bSJs8FPtnlkj8C3Q8c=",
+  "Hash": "18ahAEAYZftcnoi7ZXxm5upTMccCh7serKpkAwC1SrA=",
   "Source": "ProductApp.Mvc",
   "BasePath": "_content/ProductApp.Mvc",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ProductApp.Mvc.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\AlertifyJS\\alertify.min.js",
+      "SourceId": "ProductApp.Mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\",
+      "BasePath": "_content/ProductApp.Mvc",
+      "RelativePath": "AlertifyJS/alertify.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AlertifyJS\\alertify.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\AlertifyJS\\css\\alertify.min.css",
+      "SourceId": "ProductApp.Mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\",
+      "BasePath": "_content/ProductApp.Mvc",
+      "RelativePath": "AlertifyJS/css/alertify.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AlertifyJS\\css\\alertify.min.css"
     },
     {
       "Identity": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\wwwroot\\css\\site.css",

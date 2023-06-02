@@ -19,3 +19,24 @@
     }
 </div>
 <div page-model="Model.PaginationInfo" page-action="Index"></div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){/*hazır olduğunda fonksiyon çalıştır dedik*/
+            $('.basket').on('click', function(){//basket isimli class olan butona tıklandığında
+                let id = $(this).data('urunid');//data'sında urunid olanı al 
+                $.ajax({
+                    url:'./Shopping/AddProduct/'+id,
+                    type:'GET',
+                    success : function(data){     
+                        alertify.success(data.message);
+                    },
+                    error:function(error){
+                        console.log('hata', error)
+                        alertify.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+}
