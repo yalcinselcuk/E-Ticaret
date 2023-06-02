@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductApp.Entities
+namespace ProductApp.Dto.Responses
 {
-    public class Category : IEntity
+    public class CategoryDisplayResponse
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
         public string? Description { get; set; }
-        public ICollection<Product> Products { get; set; }
     }
 }

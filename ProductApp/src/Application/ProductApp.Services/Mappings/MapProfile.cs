@@ -14,6 +14,7 @@ namespace ProductApp.Services.Mappings
         public MapProfile() 
         {
             CreateMap<Product, ProductDisplayResponse>();
+            CreateMap<Category, CategoryDisplayResponse>();
         }
     }
 }

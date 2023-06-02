@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IProductService, ProductService>();//calisacaği servisi söyledik
 builder.Services.AddScoped<IProductRepository, FakeProductRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryRepository, FakeCategoryRepository>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 var app = builder.Build();
 
