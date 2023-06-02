@@ -1,11 +1,11 @@
-﻿@model IEnumerable<ProductDisplayResponse>
+﻿@model PaginationProductViewModel
 @{
     ViewData["Title"] = "Home Page";
     var columnCount = 0;
 }
 
 <div class="row m-2 mb-1">
-    @foreach (var productDisplay in Model)
+    @foreach (var productDisplay in Model.Products) // Products = yeni modeldeki instance
     {
         @if (columnCount != 0 && columnCount % 4 == 0)
         {
@@ -18,12 +18,4 @@
         columnCount += 1;
     }
 </div>
-<div> 
-  <ul class="pagination justify-content-center">
-
-    @for (int i = 1; i <= ViewBag.TotalPage; i++)
-        {
-            <li class="page-item @(i == ViewBag.PageNo ? "active" : "")"><a asp-action="Index" asp-route-pageNo="@i" class="page-link">@i</a></li>
-        }
-  </ul>
-</div>
+<div page-model="Model.PaginationInfo" page-action="Index"></div>

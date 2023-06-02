@@ -12,7 +12,7 @@ namespace ProductApp.Mvc.Controllers
         public HomeController(ILogger<HomeController> logger, IProductService productService)
         {
             _logger = logger;
-            this.productService = productService;   
+            this.productService = productService;
         }
 
         public IActionResult Index(int pageNo = 1)
@@ -33,15 +33,24 @@ namespace ProductApp.Mvc.Controllers
             var productPerPage = 8;
             var productCount = products.Count();
             var totalPage = Math.Ceiling((decimal)productCount / productPerPage);//yukarıya tamamladık 105 yerine 106 olursa, her sayfaya 5 tane olursa diye eksik sayfa olmasın
-            ViewBag.TotalPage = totalPage;
+
+            var paginationInfo = new PaginationInfo
+            {
+                CurrentPage = pageNo,
+                ItemsPerPage = 8,
+                TotalItems = productCount
+            };
 
             var paginatedProducts = products.OrderBy(c => c.Id)
                                           .Skip((pageNo - 1) * productPerPage)
                                           .Take(productPerPage)
                                           .ToList();
-            ViewBag.PageNo = pageNo;
-
-            return View(paginatedProducts);
+            var model = new PaginationProductViewModel
+            {
+                Products = paginatedProducts,
+                PaginationInfo = paginationInfo
+            };
+            return View(model);
         }
 
         public IActionResult Privacy()
