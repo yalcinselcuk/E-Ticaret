@@ -10,5 +10,7 @@ namespace ProductApp.Services
     public interface IProductService
     {
         IEnumerable<ProductDisplayResponse> GetProductsResponse();
+        IEnumerable<ProductDisplayResponse> GetProductByCategory(int categoryId);
+
     }
 }

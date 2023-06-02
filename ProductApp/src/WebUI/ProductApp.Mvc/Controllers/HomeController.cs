@@ -15,9 +15,12 @@ namespace ProductApp.Mvc.Controllers
             this.productService = productService;
         }
 
-        public IActionResult Index(int pageNo = 1)
+        public IActionResult Index(int pageNo = 1, int? categoryId = null)
         {
-            var products = productService.GetProductsResponse();
+            var products = categoryId== null ? productService.GetProductsResponse() : productService.GetProductByCategory(categoryId.Value);
+            // id sıfırsa demek ki bir category yok, normal çalışacak (yani GetCourseDisplayResponse)
+            // ama değilse o zaman GetCourseByCategory çalışır 
+
             /*
                 1.sayfa : 0 eleman atla, 8 eleman al
                 2.sayfa : 8 eleman atla, 8 eleman al 
@@ -37,7 +40,7 @@ namespace ProductApp.Mvc.Controllers
             var paginationInfo = new PaginationInfo
             {
                 CurrentPage = pageNo,
-                ItemsPerPage = 8,
+                ItemsPerPage = productPerPage,
                 TotalItems = productCount
             };
 

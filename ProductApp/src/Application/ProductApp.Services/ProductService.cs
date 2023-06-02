@@ -25,5 +25,11 @@ namespace ProductApp.Services
             var response = _mapper.Map<IEnumerable< ProductDisplayResponse>>(products);
             return response;
         }
+        public IEnumerable<ProductDisplayResponse> GetProductByCategory(int categoryId)
+        {
+            var products = productRepository.GetProductByCategory(categoryId);
+            var response = _mapper.Map<IEnumerable<ProductDisplayResponse>>(products);
+            return response;
+        }
     }
 }
