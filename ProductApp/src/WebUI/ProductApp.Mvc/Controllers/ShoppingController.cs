@@ -21,10 +21,10 @@ namespace ProductApp.Mvc.Controllers
         public IActionResult AddProduct(int id)
         {
             ProductDisplayResponse selectedProduct = _productService.GetProduct(id);
-            //var productItem = new ProductItem { Product = selectedProduct, Quantity = 1 };
-            //ProductCollection productCollection = getCourseCollectionFromSession();
-            //productCollection.AddNewCourse(productItem);
-            //saveToSession(productCollection);
+            var productItem = new ProductItem { Product = selectedProduct, Quantity = 1 };
+            ProductCollection productCollection = getCourseCollectionFromSession();
+            productCollection.AddNewCourse(productItem);
+            saveToSession(productCollection);
             return Json(new {message = $"{selectedProduct.Name}-{selectedProduct.Id} Sepete Eklendi"});
         }
 
