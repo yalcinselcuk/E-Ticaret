@@ -15,7 +15,7 @@ builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddSession(opt =>
 {
-    opt.IdleTimeout = TimeSpan.FromSeconds(5);
+    opt.IdleTimeout = TimeSpan.FromMinutes(5);
 });
 
 var app = builder.Build();

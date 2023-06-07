@@ -3,6 +3,7 @@ using ProductApp.Dto.Responses;
 using ProductApp.Mvc.Models;
 using ProductApp.Services;
 using System.Text.Json;
+using ProductApp.Mvc.Extensions;
 
 namespace ProductApp.Mvc.Controllers
 {
@@ -25,29 +26,17 @@ namespace ProductApp.Mvc.Controllers
             ProductCollection productCollection = getCourseCollectionFromSession();
             productCollection.AddNewCourse(productItem);
             saveToSession(productCollection);
-            return Json(new {message = $"{selectedProduct.Name}-{selectedProduct.Id} Sepete Eklendi"});
+            return Json(new {message = $"Ürün Sepete Eklendi"});
         }
 
 
         private ProductCollection getCourseCollectionFromSession()
         {
-            var serializedString = HttpContext.Session.GetString("sepetim");
-            //ilk kez sepete kurs ekleniyorsa serializedstring boş olacak
-            if (serializedString == null)//sepete ilk defa bir şey ekleniyor, sepet oluşmamış 
-            {
-                return new ProductCollection();// yeni bir instance oluştur
-            }
-            // içine girmezse demek ki önceden "sepetim" diye bir session oluşmuş ve içine bir şey atılmış
-            var collection = JsonSerializer.Deserialize<ProductCollection>(serializedString);// geri serileştir
-            return collection;
+            return HttpContext.Session.GetJson<ProductCollection>("sepetim") ?? new ProductCollection();
         }
         private void saveToSession(ProductCollection productCollection)
         {
-            var serialized = JsonSerializer.Serialize<ProductCollection>(productCollection);
-            if (!string.IsNullOrWhiteSpace(serialized)) //serialized değilse
-            {
-                HttpContext.Session.SetString("sepetim", serialized);
-            }
+            HttpContext.Session.SetJson("sepetim", productCollection);
         }
     }
 }
