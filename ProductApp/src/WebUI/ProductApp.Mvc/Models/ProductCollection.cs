@@ -1,4 +1,5 @@
-﻿using ProductApp.Entities;
+﻿using ProductApp.Dto.Responses;
+using ProductApp.Entities;
 
 namespace ProductApp.Mvc.Models
 {
@@ -41,7 +42,7 @@ namespace ProductApp.Mvc.Models
 
     public class ProductItem
     {
-        public Product Product { get; set; }
+        public ProductDisplayResponse Product { get; set; }
         public int Quantity { get; set; }
         public bool? ApplyCoupon { get; set; }//kupon uygulanabilirliği
 
