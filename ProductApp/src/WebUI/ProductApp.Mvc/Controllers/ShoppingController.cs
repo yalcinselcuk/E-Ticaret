@@ -15,7 +15,8 @@ namespace ProductApp.Mvc.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var productCollection = getCourseCollectionFromSession();
+            return View(productCollection);
         }
         public IActionResult AddProduct(int id)
         {
