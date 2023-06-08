@@ -1,4 +1,5 @@
-﻿using ProductApp.Dto.Responses;
+﻿using ProductApp.Dto.Requests;
+using ProductApp.Dto.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace ProductApp.Services
         ProductDisplayResponse GetProduct(int id);
         IEnumerable<ProductDisplayResponse> GetProductsResponse();
         IEnumerable<ProductDisplayResponse> GetProductByCategory(int categoryId);
+        Task CreateProductAsync(CreateNewProductRequest createNewProductRequest1);
 
     }
 }

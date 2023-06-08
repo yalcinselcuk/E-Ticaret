@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ProductApp.Dto.Requests;
 using ProductApp.Dto.Responses;
 using ProductApp.Entities;
 using System;
@@ -15,6 +16,7 @@ namespace ProductApp.Services.Mappings
         {
             CreateMap<Product, ProductDisplayResponse>();
             CreateMap<Category, CategoryDisplayResponse>();
+            CreateMap<CreateNewProductRequest, Product>();
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using ProductApp.Dto.Requests;
 using ProductApp.Dto.Responses;
+using ProductApp.Entities;
 using ProductApp.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -36,6 +38,12 @@ namespace ProductApp.Services
         {
             var product = productRepository.Get(id);
             return _mapper.Map<ProductDisplayResponse>(product);
+        }
+
+        public async Task CreateProductAsync(CreateNewProductRequest createNewProductRequest1)
+        {
+            var course = _mapper.Map<Product>(createNewProductRequest1);
+            await productRepository.CreateAsync(course);
         }
     }
 }
