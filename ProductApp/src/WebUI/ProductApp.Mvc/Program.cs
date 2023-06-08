@@ -8,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IProductService, ProductService>();//calisacaği servisi söyledik
-builder.Services.AddScoped<IProductRepository, FakeProductRepository>();
+builder.Services.AddScoped<IProductRepository, EFProductRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<ICategoryRepository, FakeCategoryRepository>();
+builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddSession(opt =>

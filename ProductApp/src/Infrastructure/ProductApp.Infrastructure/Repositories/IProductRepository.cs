@@ -10,6 +10,6 @@ namespace ProductApp.Infrastructure.Repositories
     public interface IProductRepository : IRepository<Product>
     {
         public IEnumerable<Product> GetProductByCategory(int categoryId);
-        public IEnumerable<Product> GetProductByName(string name);
+        public IEnumerable<Product> GetProductsByName(string name);
     }
 }

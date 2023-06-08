@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -94,5 +95,29 @@ namespace ProductApp.Infrastructure.Repositories
             return _products.Where(c => c.CategoryId == categoryId).AsEnumerable();
         }
 
+        public IEnumerable<Product> GetProductsByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Product> GetAllWithPredicate(Expression<Func<Product, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task CreateAsync(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAync(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
