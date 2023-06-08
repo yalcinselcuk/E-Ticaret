@@ -12,11 +12,12 @@ namespace ProductApp.Services.Mappings
 {
     public class MapProfile : Profile
     {
-        public MapProfile() 
+        public MapProfile()
         {
             CreateMap<Product, ProductDisplayResponse>();
             CreateMap<Category, CategoryDisplayResponse>();
             CreateMap<CreateNewProductRequest, Product>();
+            CreateMap<UpdateProductRequest, Product>().ReverseMap();
         }
     }
 }

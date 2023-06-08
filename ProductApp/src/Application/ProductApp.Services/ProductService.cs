@@ -45,5 +45,23 @@ namespace ProductApp.Services
             var course = _mapper.Map<Product>(createNewProductRequest1);
             await productRepository.CreateAsync(course);
         }
+
+        public async Task UpdateProduct(UpdateProductRequest updateProductRequest)
+        {
+            var product = _mapper.Map<Product>(updateProductRequest);
+            await productRepository.UpdateAsync(product);
+
+        }
+
+        public async Task<bool> ProductIsExists(int productId)
+        {
+            return await productRepository.IsExistsAsync(productId);
+        }
+
+        public async Task<UpdateProductRequest> GetProductForUpdateAsync(int id)
+        {
+            var product = await productRepository.GetAsync(id);
+            return _mapper.Map<UpdateProductRequest>(product);
+        }
     }
 }

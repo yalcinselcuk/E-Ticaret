@@ -66,6 +66,11 @@ namespace ProductApp.Infrastructure.Repositories
 
         }
 
+        public async Task<bool> IsExistsAsync(int id)
+        {
+            return await productDbContext.Products.AnyAsync(c => c.Id == id);
+        }
+
         public async Task UpdateAsync(Product entity)
         {
             productDbContext.Products.Update(entity);

@@ -56,6 +56,11 @@ namespace ProductApp.Infrastructure.Repositories
             return await productDbContext.Categories.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
 
+        public Task<bool> IsExistsAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task UpdateAsync(Category entity)
         {
             productDbContext.Categories.Update(entity);

@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace ProductApp.Dto.Requests
 {
-    public class CreateNewProductRequest
+    public class UpdateProductRequest
     {
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "Ürün Adını Boş Bırakmayınız")]
         [MinLength(3, ErrorMessage = "En az 3 karakter")]
         public string Name { get; set; }

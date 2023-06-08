@@ -19,11 +19,13 @@ namespace ProductApp.Mvc.Controllers
             this.categoryService = categoryService;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             var products = productService.GetProductsResponse();
             return View(products);
         }
+        [HttpGet]
         public async Task<IActionResult> Create()
         {
             ViewBag.Categories = getCategoriesForSelectList();
@@ -39,6 +41,31 @@ namespace ProductApp.Mvc.Controllers
             }
             ViewBag.Categories = getCategoriesForSelectList();
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            ViewBag.Categories = getCategoriesForSelectList();
+            var product = await productService.GetProductForUpdateAsync(id);
+            
+            return View(product);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, UpdateProductRequest updateProductRequest)
+        {
+            if (await productService.ProductIsExists(id))
+            {
+                if (ModelState.IsValid)
+                {
+                    await productService.UpdateProduct(updateProductRequest);
+                    return RedirectToAction(nameof(Index));
+                }
+                ViewBag.Categories = getCategoriesForSelectList();
+                return View();
+            }
+            return NotFound();
         }
 
         private IEnumerable<SelectListItem> getCategoriesForSelectList()
