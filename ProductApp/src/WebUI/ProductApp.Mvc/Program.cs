@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using ProductApp.Infrastructure.Data;
 using ProductApp.Infrastructure.Repositories;
 using ProductApp.Services;
 using ProductApp.Services.Mappings;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +18,12 @@ builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddSession(opt =>
 {
-    opt.IdleTimeout = TimeSpan.FromMinutes(5);
+    opt.IdleTimeout = TimeSpan.FromMinutes(15);
 });
+
+var connectionString = builder.Configuration.GetConnectionString("db");
+builder.Services.AddDbContext<ProductDbContext>(option => option.UseSqlServer(connectionString));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();//migration'da oluşabilecek hataları döndürür
 
 var app = builder.Build();
 
@@ -27,6 +34,12 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var context = services.GetRequiredService<ProductDbContext>();
+context.Database.EnsureCreated();
+DbSeeding.SeedDatabase(context);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

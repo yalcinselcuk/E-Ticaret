@@ -13,3 +13,5 @@ C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Infrastructure\ProductApp.Infras
 C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Infrastructure\ProductApp.Infrastructure\obj\Debug\net7.0\refint\ProductApp.Infrastructure.dll
 C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Infrastructure\ProductApp.Infrastructure\obj\Debug\net7.0\ProductApp.Infrastructure.pdb
 C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Infrastructure\ProductApp.Infrastructure\obj\Debug\net7.0\ref\ProductApp.Infrastructure.dll
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Infrastructure\ProductApp.Infrastructure\bin\Debug\net7.0\ProductApp.Infrastructure.runtimeconfig.json
+C:\Users\yalci\Desktop\E-Ticaret\ProductApp\src\Infrastructure\ProductApp.Infrastructure\obj\Debug\net7.0\ProductApp.Infrastructure.genruntimeconfig.cache

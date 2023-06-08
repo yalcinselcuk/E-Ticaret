@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LlNroqErZkp5izy8p88wogbASu92N9eywZNODQXEdbWHwG3BjFH8IUogVdrtW7cs6LV3PvouCdeP7/e47ywSaQ==",
+  "dgSpecHash": "vbiwO/JwdzFTKcxOEuwd1uTIHmpjOxuYaTdN+H+IKfXITcFigrG0N2VQaQu8quIRQ9MJm1wTpJXn2jTaRZDCBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebUI\\ProductApp.Mvc\\ProductApp.Mvc.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\yalci\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\yalci\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\yalci\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\yalci\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\7.0.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\yalci\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\yalci\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\yalci\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
