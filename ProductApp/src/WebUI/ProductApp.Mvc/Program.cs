@@ -4,6 +4,7 @@ using ProductApp.Infrastructure.Data;
 using ProductApp.Infrastructure.Repositories;
 using ProductApp.Services;
 using ProductApp.Services.Mappings;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,7 @@ builder.Services.AddScoped<IProductService, ProductService>();//calisacaği serv
 builder.Services.AddScoped<IProductRepository, EFProductRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddSession(opt =>
@@ -24,6 +26,14 @@ builder.Services.AddSession(opt =>
 var connectionString = builder.Configuration.GetConnectionString("db");
 builder.Services.AddDbContext<ProductDbContext>(option => option.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();//migration'da oluşabilecek hataları döndürür
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                {
+                    opt.LoginPath = "/Users/Login";
+                    opt.AccessDeniedPath = "/Users/AccessDenied";
+                    opt.ReturnUrlParameter = "gidilecekSayfa";
+                });
 
 var app = builder.Build();
 

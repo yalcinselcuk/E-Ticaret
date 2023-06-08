@@ -1,18 +1,21 @@
-﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProductApp.Dto.Requests;
 using ProductApp.Services;
+using System.Data;
 
 namespace ProductApp.Mvc.Controllers
 {
+    [Authorize(Roles = "Admin, Editor")]
     public class ProductsController : Controller
     {
         private readonly IProductService productService;
         private readonly ICategoryService categoryService;
-        public ProductsController(IProductService courseService, ICategoryService categoryService)
+        public ProductsController(IProductService productService, ICategoryService categoryService)
         {
-            this.productService = courseService;
+            this.productService = productService;
             this.categoryService = categoryService;
         }
 

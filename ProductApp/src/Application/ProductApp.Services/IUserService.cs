@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductApp.Infrastructure.Repositories
+namespace ProductApp.Services
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IUserService
     {
+        User ValidateUser(string username, string password);
     }
 }
