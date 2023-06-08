@@ -6,6 +6,7 @@ using ProductApp.Services;
 using ProductApp.Services.Mappings;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using ProductApp.Mvc.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +25,7 @@ builder.Services.AddSession(opt =>
 });
 
 var connectionString = builder.Configuration.GetConnectionString("db");
-builder.Services.AddDbContext<ProductDbContext>(option => option.UseSqlServer(connectionString));
+builder.Services.AddInjections(connectionString); 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();//migration'da oluşabilecek hataları döndürür
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
