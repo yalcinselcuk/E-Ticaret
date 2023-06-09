@@ -18,6 +18,7 @@ namespace ProductApp.Services.Mappings
             CreateMap<Category, CategoryDisplayResponse>();
             CreateMap<CreateNewProductRequest, Product>();
             CreateMap<UpdateProductRequest, Product>().ReverseMap();
+            CreateMap<DeleteProductRequest, Product>().ReverseMap();
         }
     }
 }

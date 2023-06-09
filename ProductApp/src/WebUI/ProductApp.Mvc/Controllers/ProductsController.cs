@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using ProductApp.Dto.Requests;
 using ProductApp.Services;
 using System.Data;
@@ -66,6 +67,28 @@ namespace ProductApp.Mvc.Controllers
                 return View();
             }
             return NotFound();
+        }
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var product = await productService.GetProductForDeleteAsync(id);
+            return View(product);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id, DeleteProductRequest deleteProductRequest)
+        {
+            if (await productService.ProductIsExists(id))
+            {
+                if (!ModelState.IsValid)
+                {
+                    await productService.DeleteProduct(deleteProductRequest);
+                    return RedirectToAction(nameof(Index));
+                }
+                return View();
+            }
+
+            return RedirectToAction("Index"); // Silme işlemi tamamlandıktan sonra yönlendirme yapabilirsiniz
         }
 
         private IEnumerable<SelectListItem> getCategoriesForSelectList()

@@ -19,7 +19,9 @@ namespace ProductApp.Infrastructure.Repositories
 
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
-        Task DeleteAync(int id);
+        //Task DeleteAsync(int id);
+        Task DeleteAsync(T entity);
+
         Task<bool> IsExistsAsync(int id);
     }
 }

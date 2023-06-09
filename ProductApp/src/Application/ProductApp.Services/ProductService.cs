@@ -52,6 +52,12 @@ namespace ProductApp.Services
             await productRepository.UpdateAsync(product);
 
         }
+        public async Task DeleteProduct(DeleteProductRequest deleteProductRequest)
+        {
+            var product = _mapper.Map<Product>(deleteProductRequest);
+            await productRepository.DeleteAsync(product);
+
+        }
 
         public async Task<bool> ProductIsExists(int productId)
         {
@@ -62,6 +68,12 @@ namespace ProductApp.Services
         {
             var product = await productRepository.GetAsync(id);
             return _mapper.Map<UpdateProductRequest>(product);
+        }
+
+        public async Task<DeleteProductRequest> GetProductForDeleteAsync(int id)
+        {
+            var product = await productRepository.GetAsync(id);
+            return _mapper.Map<DeleteProductRequest>(product);
         }
     }
 }

@@ -24,11 +24,16 @@ namespace ProductApp.Infrastructure.Repositories
             await productDbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteAync(int id)
+        public async Task DeleteAsync(int id)
         {
             var deletingCategory = await productDbContext.Categories.FindAsync(id);
             productDbContext.Categories.Remove(deletingCategory);
             await productDbContext.SaveChangesAsync();
+        }
+
+        public Task DeleteAsync(Category entity)
+        {
+            throw new NotImplementedException();
         }
 
         public Category? Get(int id)
