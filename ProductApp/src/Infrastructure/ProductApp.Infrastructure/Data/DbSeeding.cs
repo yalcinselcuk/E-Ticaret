@@ -13,6 +13,7 @@ namespace ProductApp.Infrastructure.Data
         {
             seedCategoryIfNotExist(dbContext);
             seedCourseIfNotExist(dbContext);
+            //seedUserIfNotExist(dbContext);
         }
 
         private static void seedCategoryIfNotExist(ProductDbContext dbContext)
@@ -29,6 +30,19 @@ namespace ProductApp.Infrastructure.Data
                 dbContext.SaveChanges();
             }
         }
+
+        //private static void seedUserIfNotExist(ProductDbContext dbContext)
+        //{
+        //    if (!dbContext.Users.Any())
+        //    {
+        //        var _users = new List<User>()
+        //        {
+        //            new User(){Id=1, Name="Türkay", Password="123", Email="abc@xyz.com", Role="Admin", UserName="turko"},
+        //            new User(){Id=1, Name="Yalçın", Password="123", Email="abc@xyz.com", Role="Editor", UserName="selçuk"},
+        //            new User(){Id=1, Name="Kerem", Password="123", Email="abc@xyz.com", Role="Client", UserName="yılmazer"}
+        //        };
+        //    }
+        //}
 
         private static void seedCourseIfNotExist(ProductDbContext dbContext)
         {
