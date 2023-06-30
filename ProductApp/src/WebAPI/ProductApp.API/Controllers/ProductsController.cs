@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProductApp.Dto.Requests;
 using ProductApp.Services;
 
 namespace ProductApp.API.Controllers
@@ -13,11 +14,11 @@ namespace ProductApp.API.Controllers
         private readonly IProductService _productService;
         public ProductsController(IProductService productService)
         {
-            _productService = productService;   
+            _productService = productService;
         }
 
         [HttpGet]
-        public IActionResult GetProducts() 
+        public IActionResult GetProducts()
         {
             var products = _productService.GetProductsResponse();
             return Ok(products);
@@ -27,7 +28,7 @@ namespace ProductApp.API.Controllers
         public IActionResult GetProduct(int id)
         {
             var product = _productService.GetProduct(id);
-            if(product == null)
+            if (product == null)
             {
                 return NotFound();
             }
@@ -42,10 +43,22 @@ namespace ProductApp.API.Controllers
         }
         //controller'da iki tane default httpget olmaz 
         [HttpGet("[action]")]
-        public  IActionResult GetProductByCategory(int categoryId)
+        public IActionResult GetProductByCategory(int categoryId)
         {
-            var products =  _productService.GetProductByCategory(categoryId);
+            var products = _productService.GetProductByCategory(categoryId);
             return Ok(products);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateNewProductRequest request)
+        {
+            if (ModelState.IsValid)//request'in kurallarına uydun mu, uyduysa
+            {
+                var lastProductId = await _productService.CreateProductAndReturnIdAsync(request);//int döndürmesi daha anlamlı olur kullanılan metodun
+                return CreatedAtAction(nameof(GetProduct), routeValues: new { id = lastProductId }, null); //201 döndürür, yani yeni bir kaynak oluşturulduğunu bildirir.
+                                                                                                           //evet bu yeni isteği kaydettim ve bunun detaylarına şu linkten ulaşabilirsin diyoruz
+            }
+            return BadRequest(ModelState);//request'in kurallarına uymadıysa direk exception yesin
         }
     }
 }

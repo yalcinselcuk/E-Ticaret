@@ -19,7 +19,8 @@ namespace ProductApp.Services
         IEnumerable<ProductDisplayResponse> GetProductByCategory(int categoryId);
 
         Task<IEnumerable<ProductDisplayResponse>> SearchByName(string productName);
-        Task CreateProductAsync(CreateNewProductRequest createNewProductRequest1);
+        Task CreateProductAsync(CreateNewProductRequest createNewProductRequest);
+        Task<int> CreateProductAndReturnIdAsync(CreateNewProductRequest createNewProductRequest);
 
         Task UpdateProduct(UpdateProductRequest updateProductRequest);
         Task DeleteProduct(DeleteProductRequest deleteProductRequest);

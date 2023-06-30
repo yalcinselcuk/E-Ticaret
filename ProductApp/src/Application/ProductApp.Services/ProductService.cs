@@ -40,9 +40,9 @@ namespace ProductApp.Services
             return _mapper.Map<ProductDisplayResponse>(product);
         }
 
-        public async Task CreateProductAsync(CreateNewProductRequest createNewProductRequest1)
+        public async Task CreateProductAsync(CreateNewProductRequest createNewProductRequest)
         {
-            var course = _mapper.Map<Product>(createNewProductRequest1);
+            var course = _mapper.Map<Product>(createNewProductRequest);
             await productRepository.CreateAsync(course);
         }
 
@@ -80,6 +80,13 @@ namespace ProductApp.Services
         {
             var products = await productRepository.GetProductsByName(productName);
             return _mapper.Map<IEnumerable<ProductDisplayResponse>>(products);
+        }
+
+        public async Task<int> CreateProductAndReturnIdAsync(CreateNewProductRequest createNewProductRequest)
+        {
+            var product = _mapper.Map<Product>(createNewProductRequest);
+            await productRepository.CreateAsync(product);
+            return product.Id;
         }
     }
 }
