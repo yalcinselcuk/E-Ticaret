@@ -75,5 +75,11 @@ namespace ProductApp.Services
             var product = await productRepository.GetAsync(id);
             return _mapper.Map<DeleteProductRequest>(product);
         }
+
+        public async Task<IEnumerable<ProductDisplayResponse>> SearchByName(string productName)
+        {
+            var products = await productRepository.GetProductsByName(productName);
+            return _mapper.Map<IEnumerable<ProductDisplayResponse>>(products);
+        }
     }
 }

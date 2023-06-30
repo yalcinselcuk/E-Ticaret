@@ -66,9 +66,15 @@ namespace ProductApp.Infrastructure.Repositories
             return productDbContext.Products.AsNoTracking().Where(c => c.CategoryId == categoryId).AsEnumerable();
         }
 
-        public IEnumerable<Product> GetProductsByName(string name)
+        public async Task<IEnumerable<Product>> GetProductByCategoryAsync(int categoryId)
         {
-            return productDbContext.Products.AsNoTracking().Where(c => c.Name.Contains(name)).AsEnumerable();
+            return await productDbContext.Products.AsNoTracking().Where(c => c.CategoryId == categoryId).ToListAsync();
+
+        }
+
+        public async Task<IEnumerable<Product>> GetProductsByName(string name)
+        {
+            return await productDbContext.Products.AsNoTracking().Where(c => c.Name.Contains(name)).ToListAsync();
 
         }
 

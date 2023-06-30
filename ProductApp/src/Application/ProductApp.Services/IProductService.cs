@@ -17,6 +17,8 @@ namespace ProductApp.Services
 
         IEnumerable<ProductDisplayResponse> GetProductsResponse();
         IEnumerable<ProductDisplayResponse> GetProductByCategory(int categoryId);
+
+        Task<IEnumerable<ProductDisplayResponse>> SearchByName(string productName);
         Task CreateProductAsync(CreateNewProductRequest createNewProductRequest1);
 
         Task UpdateProduct(UpdateProductRequest updateProductRequest);
