@@ -4,14 +4,14 @@
     "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj": {
+    "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Dto\\ProductApp.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj",
-        "projectName": "ProductApp.API",
-        "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Dto\\ProductApp.Dto.csproj",
+        "projectName": "ProductApp.Dto",
+        "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Dto\\ProductApp.Dto.csproj",
         "packagesPath": "C:\\Users\\yalci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\obj\\",
+        "outputPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Dto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,300 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\ProductApp.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\ProductApp.Services.csproj",
+        "projectName": "ProductApp.Services",
+        "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\ProductApp.Services.csproj",
+        "packagesPath": "C:\\Users\\yalci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yalci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Dto\\ProductApp.Dto.csproj": {
+                "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Dto\\ProductApp.Dto.csproj"
+              },
+              "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Infrastructure\\ProductApp.Infrastructure\\ProductApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Infrastructure\\ProductApp.Infrastructure\\ProductApp.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj",
+        "projectName": "ProductApp.Entities",
+        "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj",
+        "packagesPath": "C:\\Users\\yalci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yalci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Infrastructure\\ProductApp.Infrastructure\\ProductApp.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Infrastructure\\ProductApp.Infrastructure\\ProductApp.Infrastructure.csproj",
+        "projectName": "ProductApp.Infrastructure",
+        "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Infrastructure\\ProductApp.Infrastructure\\ProductApp.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\yalci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Infrastructure\\ProductApp.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yalci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Domains\\ProductApp.Entities\\ProductApp.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj",
+        "projectName": "ProductApp.API",
+        "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\ProductApp.API.csproj",
+        "packagesPath": "C:\\Users\\yalci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\WebAPI\\ProductApp.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\yalci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\ProductApp.Services.csproj": {
+                "projectPath": "C:\\Users\\yalci\\Desktop\\E-Ticaret\\ProductApp\\src\\Application\\ProductApp.Services\\ProductApp.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.2, )"
