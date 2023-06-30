@@ -24,6 +24,9 @@ namespace ProductApp.Services
 
         Task UpdateProduct(UpdateProductRequest updateProductRequest);
         Task DeleteProduct(DeleteProductRequest deleteProductRequest);
+        
         Task<bool> ProductIsExists(int productId);
+        
+
     }
 }

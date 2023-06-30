@@ -60,5 +60,31 @@ namespace ProductApp.API.Controllers
             }
             return BadRequest(ModelState);//request'in kurallarına uymadıysa direk exception yesin
         }
+        [HttpPut("{id}")]//ıdempotent = hep aynı sonuc
+        public async Task<IActionResult> Update(int id, UpdateProductRequest updateProductRequest)
+        {
+            var isExist = await _productService.ProductIsExists(id);
+            if (isExist)//varsa güncelleyeceğiz
+            {
+                if (ModelState.IsValid)//kurallara uyuyor mu
+                {
+                    await _productService.UpdateProduct(updateProductRequest);
+                    return Ok();//201 de dönebiliriz
+                }
+                return BadRequest(ModelState);
+            }
+            return NotFound();//yoksa 
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (await _productService.ProductIsExists(id))//böyle bir şey varsa
+            {
+                var product = await _productService.GetProductForDeleteAsync(id);
+                await _productService.DeleteProduct(product);
+                return Ok();
+            }
+            return NotFound();
+        }
     }
 }

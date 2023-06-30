@@ -25,14 +25,14 @@ namespace ProductApp.Infrastructure.Repositories
 
         //public async Task DeleteAsync(int id)
         //{
-        //    var deletingCourse = await productDbContext.Products.FindAsync(id);
-        //    productDbContext.Products.Remove(deletingCourse);
+        //    var deletingProduct = await productDbContext.Products.FindAsync(id);
+        //    productDbContext.Products.Remove(deletingProduct);
         //    await productDbContext.SaveChangesAsync();
         //}
         public async Task DeleteAsync(Product entity)
         {
-            var deletingCourse = await productDbContext.Products.FindAsync(entity.Id);
-            productDbContext.Products.Remove(deletingCourse);
+            var deletingProduct = await productDbContext.Products.FindAsync(entity.Id);
+            productDbContext.Products.Remove(deletingProduct);
             await productDbContext.SaveChangesAsync();
         }
 
