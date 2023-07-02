@@ -9,12 +9,14 @@
 
 <body>
     <button id="getir">Ürünleri Getir</button>
-    <ul id="products">
+    
+    <ol id="products">
 
-    </ul>
+    </ol>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script>
+
         $(document).ready(function () {
             $('#getir').on('click', function () {
                 $.ajax({
@@ -22,8 +24,8 @@
                     type: 'GET',
                     success: function (data) {
                         $.each(data, function (index, element) {
-                            let name = $('<h1>' + element.name + '</h1>');
-                            let img = $("<img src='" + element.imageUrl + "' />");
+                            let name = $('<h1 width=10%>' + element.name + '</h1>');
+                            let img = $("<img  width=10% src='" + element.imageUrl + "' />");
                             let li = document.createElement("li");
                             $(li).append(name);
                             $(li).append(img);
