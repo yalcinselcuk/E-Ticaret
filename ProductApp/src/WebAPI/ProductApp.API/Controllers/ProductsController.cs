@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProductApp.API.Filters;
 using ProductApp.Dto.Requests;
 using ProductApp.Services;
 
@@ -85,6 +86,13 @@ namespace ProductApp.API.Controllers
                 return Ok();
             }
             return NotFound();
+        }
+
+        [HttpGet("[action]")]
+        [NotImplemented]
+        public async Task<IActionResult> Bitmemis(int id)
+        {
+            throw new NotImplementedException(); 
         }
     }
 }
