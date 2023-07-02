@@ -1,4 +1,4 @@
-using ProductApp.API.Extensions;
+﻿using ProductApp.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +12,17 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("db");
 builder.Services.AddInjections(connectionString);
 
+//cqrs = frontend için eklendi
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("allow", builder =>//allow = her şeye izin ver
+    {
+        builder.AllowAnyHeader();//her request header'a izin ver
+        builder.AllowAnyMethod();
+        builder.AllowAnyOrigin();//http ile https farklı origin'ler.bunlara izin ver dedik
+    });
+} );
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +33,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("allow");
 
 app.UseAuthorization();
 
